@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-x3+^k(i9@s@h&5#1le#k#c&qh^=*k_=7zb*d^j!iar11n!!!ii
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu102.gitpod.io',
+                 '8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu103.gitpod.io']
 
 
 # Application definition
@@ -38,7 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -67,6 +74,16 @@ TEMPLATES = [
         },
     },
 ]
+
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
 
 WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 
