@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-x3+^k(i9@s@h&5#1le#k#c&qh^=*k_=7zb*d^j!iar11n!!!ii
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu102.gitpod.io',
-                 '8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu103.gitpod.io']
+                 '8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu103.gitpod.io',
+                 '8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu104.gitpod.io',]
 
 
 # Application definition
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
 ]
 
 SITE_ID = 1
@@ -72,7 +74,10 @@ ROOT_URLCONF = 'boutique_ado.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                os.path.join(BASE_DIR, 'templates'),
+                os.path.join(BASE_DIR, 'templates', 'allauth'),
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
