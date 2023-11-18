@@ -28,7 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu102.gitpod.io',
                  '8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu103.gitpod.io',
-                 '8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu104.gitpod.io',]
+                 '8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu104.gitpod.io',
+                 '8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu105.gitpod.io',
+                 '8000-siobhanp1-boutiqueadoon-yboa74998nz.ws-eu106.gitpod.io',
+                 ]
 
 
 # Application definition
