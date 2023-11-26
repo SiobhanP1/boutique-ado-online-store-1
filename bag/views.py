@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
+from products.models import Product
 
 # Create your views here.
 
@@ -59,6 +61,8 @@ def remove_from_bag(request, item_id):
 
 def add_to_bag(request, item_id):
     """Add a quantity of specified item to shopping bag"""
+
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
@@ -80,6 +84,7 @@ def add_to_bag(request, item_id):
             bag[item_id] += quantity  #increment by quantity
         else:
             bag[item_id] = quantity
+            messages.success(request, f'Added {product.name} to bag')
 
     request.session['bag'] = bag
     print(request.session['bag'])
