@@ -28,6 +28,16 @@ box-shadow: 0 1px 3px 0 #cfd7df;
     right: .5rem;
 }
 
+select, 
+select option {
+    color: #000000;
+}
+
+select:invalid, 
+select option[value=""] {
+    color: #aab7a4 !important;
+}
+
 #payment-form, .form-control, 
 #card-element {
     color: #000;
