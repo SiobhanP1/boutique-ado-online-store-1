@@ -75,6 +75,8 @@
                     <div class="mb-3" id="card-element"></div> 
                     <!--Card errors will be displayed here-->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div> 
+                    <!--Pass the client secret to the view so can get payment intent id-->
+                    <input type="hidden" name="client_secret" id="" value="{{ client_secret }}">
                 </fieldset>
 
                 <div class="submit-button text-right mt-5 mb-2">
