@@ -171,6 +171,13 @@ a.category-badge > span.badge:hover {
     border-bottom-color: #343a40 !important;
 }
 
+/* -------------------------------- Allauth */
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input {
+    
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
