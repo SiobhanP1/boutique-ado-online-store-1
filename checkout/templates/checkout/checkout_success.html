@@ -197,9 +197,15 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-7 text-right">
+            {% if from_profile %}
+            <a href="{% url 'profile' %}">
+                <span class="text-uppercase">Return to My Profile</span>
+            </a>
+            {% else %}
             <a href="{% url 'products' %}?category=new_arrivals,deals,clearance">
                 <span class="text-uppercase">Check out latest deals</span>
             </a>
+            {% endif %}
         </div>
     </div>
 </div>

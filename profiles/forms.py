@@ -7,7 +7,7 @@ class UserProfileForm(forms.ModelForm):
         exclude = (user,)
 
     def __init__(*args, **kwargs):
-        """Add placeholders and classes. Autofocus on first field.""" 
+        """Add placeholders and classes. Autofocus on first field. Remove labels""" 
         super().__init__(self, *args, **kwargs)
         placeholders = {
             'default_phone_number': 'Phone Number',
