@@ -1,3 +1,4 @@
+/* height of form on one side of page. Order history will have scroll bar if above this*/
 .order-history {
     max-height: 416px;
     overflow-y: auto;
